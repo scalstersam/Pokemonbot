@@ -83,16 +83,10 @@ class fighter(Pokemon):
     async def feed(self):
         return super().feed(feed_interval=10)
 
-
-# ==========================================
-# TEMPAT MENAMBAHKAN KODE UJI COBA (MAIN)
-# ==========================================
 async def main():
-    # Perhatikan perubahan huruf kecil/besar (wizard -> wizard, fighter -> fighter)
     my_wizard = wizard("username1")
     my_fighter = fighter("username2")
 
-    # Karena info() dan attack() adalah fungsi async, gunakan await
     print(await my_wizard.info())
     print()
     print(await my_fighter.info())
